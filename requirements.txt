@@ -1,4 +1,7 @@
 anthropic
+langchain
+langchain-anthropic
+langchain-core
 deepeval
 pytest
 python-dotenv

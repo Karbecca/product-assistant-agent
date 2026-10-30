@@ -33,9 +33,9 @@ class ClaudeHaiku(DeepEvalBaseLLM):
 eval_model = ClaudeHaiku()
 
 inputs = [
-    ("What is the price of P002?", [check_price("P002")]),
-    ("Find the laptop", [search_product("laptop")]),
-    ("What is the price of P999?", [check_price("P999")]),
+    ("What is the price of P002?", [check_price.invoke({"product_id": "P002"})]),
+    ("Find the laptop", [search_product.invoke({"query": "laptop"})]),
+    ("What is the price of P999?", [check_price.invoke({"product_id": "P999"})]),
 ]
 
 test_cases = [
